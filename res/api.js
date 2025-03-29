@@ -8,6 +8,12 @@ export const login = async (body) => {
     return await fetchApi(url, "POST", JSON.stringify(body));
 };
 
+export const getPrudact = async (body) => {
+    const url = "/Login";
+
+    return await fetchApi(url, "POST", JSON.stringify(body));
+};
+
 
 export const createUser = async (body) => {
     const url = "/createUser";
@@ -30,6 +36,8 @@ export const fetchApi = async (route, method, body) => {
             console.error("fetch Error", error?.message);
         });
 }
+
+
 
 
 

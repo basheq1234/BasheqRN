@@ -7,10 +7,11 @@ import { useNavigation } from 'expo-router'
 
 const Home = () => {
   const nav = useNavigation()
-  
+
   const renderData = () => {
-    return contact.map((item, index) => (
+    return [].map((item, index) => (
       <Product
+        name={item.productName}
         key={index}
         number={item.number}
         price={item.price}
@@ -77,4 +78,3 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
 })
- 
